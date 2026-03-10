@@ -368,7 +368,19 @@ function submitOutfit() {
     drawer.classList.remove("locked");
     drawer.classList.add("unlocked");
     drawer.innerText = "🗄️ Drawer Unlocked! Code: 371";
-    launchConfetti();
+   confetti({
+  particleCount: 100,
+  angle: 60,
+  spread: 70,
+  origin: { x: 0 }
+});
+
+confetti({
+  particleCount: 100,
+  angle: 120,
+  spread: 70,
+  origin: { x: 1 }
+});
   } else {
     alert("Over budget!");
   }
